@@ -210,7 +210,7 @@ namespace ModEngineGUI
                     string pathB = modB.FullModPath + @"\" + filePath;
                     Directory.CreateDirectory(pathA);
                     File.Copy(pathA, pathB, true);
-                } else if (Path.GetFileName(filePath) != "gameparam.parambnd.dcx")
+                } else if (Path.GetFileName(filePath) == "gameparam.parambnd.dcx")
                 {
                     var paramA = BND4.Read(modA.FullModPath + @"\" + filePath);
                     var paramB = BND4.Read(modB.FullModPath + @"\" + filePath);
